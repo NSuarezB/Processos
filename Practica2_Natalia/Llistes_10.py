@@ -1,6 +1,11 @@
 
 import random
 
-llista = [random.randint(0,100),random.randint(0,100),random.randint(0,100),random.randint(0,100),random.randint(0,100),random.randint(0,100),random.randint(0,100),random.randint(0,100),random.randint(0,100),random.randint(0,100)]
+llista = []
+
+
+for i in range(100):
+    llista.append(random.randint(1,100))
 
 print(llista)
+print llista[-1]
