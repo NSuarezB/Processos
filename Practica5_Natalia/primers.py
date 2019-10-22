@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
-import sys
 
+""" Calcula els n numeros primers entre 2 i 994 """
+import sys
 
 class llista_primers:
 
     """
-    Calcula els n numeros primers entre 2 i 994
+
 
 
     Tests:
