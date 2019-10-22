@@ -1,21 +1,22 @@
 # -*- coding: utf-8 -*-
 import sys
 
-# Calcula i retorna els n numeros primers entre 0 i 994
-
 
 class llista_primers:
 
     """
+    Calcula els n numeros primers entre 2 i 994
+
+
     Tests:
 
-    >>> llista_primers(3).l
-    [2,3,5]
+    >>> llista_primers(3).llista
+    [2, 3, 5]
 
-    >>> llista_primers(5).l
-    [2,3,5,7,11]
+    >>> llista_primers(5).llista
+    [2, 3, 5, 7, 11]
 
-    >>> llista_primers(1).l
+    >>> llista_primers(1).llista
     [2]
 
     """
@@ -37,7 +38,7 @@ class llista_primers:
         ################################
 
         ___llista___ Sempre començara per 2, ja que sempre comença buit.
-        
+
 
         if ___llista.length___==0 ;  then __llista__=llista[2];
 
@@ -83,7 +84,6 @@ class llista_primers:
 
 if __name__ == '__main__':
     import doctest
-    doctest.testfile("doc.html")
-    """     Mostra llista, i demana un argument n     """
-    l = llista_primers(int(sys.argv[1]))
-    print l.llista
+    doctest.testmod()
+    #l = llista_primers(int(sys.argv[1]))
+    #print l.llista
