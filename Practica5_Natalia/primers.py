@@ -7,6 +7,7 @@ import sys
 class llista_primers:
 
     """
+    Tests:
 
     >>> llista_primers(3).l
     [2,3,5]
@@ -19,27 +20,54 @@ class llista_primers:
 
     """
     def __init__(self, n):
-        """ n = arg
-        inicialitza llista
+        """
+        ___n___ = numeros mostrats.
+        ___llista___= array buida.
+
+        S'activa la funcio busca
         """
         self.n = n
         self.llista = []
         self.busca()
 
     def busca(self):
+        """
+        ################################
+         Aquesta es la funció principal
+        ################################
+
+        ___llista___ Sempre començara per 2, ja que sempre comença buit.
+        
+
+        if ___llista.length___==0 ;  then __llista__=llista[2];
+
+        else ; comença la busqueda de nombres primers
+
+        !!! la funcio s'acaba quan llista length==n !!!
+
+        ___seguent___==___llista___[ultim valor de la llista]+1;
+
+        Es comprova si es numero primer amb els numeros afegits a l'array
+        Si seguent%i==0 seguent++;
+
+        El for es "reinicia" amb el break
+         ___llista___=llista.add(___seguent___)
+
+
+        Cridem constantment la funcio sense destinció
+          per comprovar si s'ha acabat
+
+        """
+
         if (len(self.llista) == 0):
         # llista[0]==2 -- Sempre
             self.llista.append(2)
             self.busca()
 
-            """ la funcio s'acaba quan llista length==n """
         elif (len(self.llista) < self.n):
             trobat = False
-            # seguent==llista[ultim valor de la llista]+1
             seguent = self.llista[-1]+1
-            """ Si seguent%i==0 seguent++.
-            El for es "reinicia" amb el break
-             llista=llista+seguent """
+
             while not trobat:
                 for i in self.llista:
                     if seguent%i == 0:
@@ -49,8 +77,7 @@ class llista_primers:
                     else:
                         trobat = True
             self.llista.append(seguent)
-            """ cridem constantment la funcio sense destinció
-             per comprovar si s'ha acabat"""
+
             self.busca()
 
 
